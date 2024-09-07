@@ -1,0 +1,135 @@
+/* Override buttons colors */
+.btn-primary {
+    background-color: #4CAF50 !important; /* Green background */
+    border-color: #e2eae3 !important;     /* Green border */
+}
+
+.btn-light {
+    background-color: #faf8f3 !important; /* Yellow background */
+    border-color: #4CAF50 !important;     /* Yellow border */
+}
+
+/* Custom hover state */
+.btn-primary:hover {
+    background-color: #45a049 !important; /* Darker green on hover */
+}
+
+.btn-light:hover {
+    background-color: #f7f0e0 !important; /* Darker yellow on hover */
+    color: #3d9140;
+}
+
+.btn-light {
+    color: #3d9140;
+}
+
+/* Override background colors newsletter banner */
+
+.bg-primary{
+    background-color: #3d9140 !important;
+}
+
+/* Override background colors background dark sections */
+
+.bg-dark {
+    background-color: #edeee0 !important;
+}
+
+/* Override font colours blog post */
+
+.blogpost h3,
+.blogpost h5{
+    color:  #3d9140 !important;
+    font-weight: bold;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #06330b !important;
+}
+
+/* Home Page - Hero Section */
+.masthead {
+    background-image: url('/img/hero33.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 60vh;
+    position: relative;
+    color: rgb(250, 251, 250);
+}
+.masthead h1,
+.masthead h4 {
+    text-shadow: 1px 1px black;
+}
+
+/* Home Page - Newsletter Section */
+.news-input {
+    width: 100%; /* Default for smaller screens */
+}
+
+@media (min-width: 768px) {
+    .news-input {
+        width: 50%; /* Adjust width for larger screens */
+    }
+}
+
+/*event page*/
+.carousel-item {
+    position: relative;
+}
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+    text-align: left;
+}
+.carousel-caption h5 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.carousel-caption p {
+    font-size: 1.25rem;
+}
+
+/* blog page*/
+
+.blog-header {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+.blog-post {
+    margin-bottom: 20px;
+}
+.blog-post img {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+/*articles pages*/
+.article-header {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    margin-bottom: 30px;
+}
+.article-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.article-author {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+.article-body {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+.article-footer {
+    margin-top: 40px;
+    border-top: 1px solid #dee2e6;
+    padding-top: 20px;
+}
