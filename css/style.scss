@@ -1,0 +1,210 @@
+// Variables
+$primary-color: #4CAF50;
+$primary-light: #45a049;
+$secondary-color: #faf8f3;
+$secondary-light: #f0e68c;
+$dark-color: #3d9140;
+$hover-color: #ffcc00;
+$border-radius: 5px;
+$transition: background 0.3s, transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+$shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+$font-weight-bold: bold;
+
+// Mixin for button styles
+@mixin button-styles($bg-start, $bg-end, $border-color, $text-color) {
+    background: linear-gradient(to right, $bg-start, $bg-end) !important;
+    border: 2px solid $border-color !important;
+    border-radius: $border-radius;
+    color: $text-color;
+    transition: $transition;
+
+    &:hover {
+        background: linear-gradient(to right, $bg-end, $bg-start) !important;
+        border-color: $hover-color !important;
+        transform: scale(1.05);
+        box-shadow: $shadow;
+    }
+}
+
+// Button styles
+.btn-primary {
+    @include button-styles($primary-color, $primary-light, #ffffff, white);
+}
+
+.btn-light {
+    @include button-styles($secondary-color, $secondary-light, $primary-color, $dark-color);
+}
+
+// Background colors
+.bg-primary {
+    background-color: $dark-color !important;
+}
+
+.bg-dark {
+    background-color: #edeee0 !important;
+}
+
+// Blog post styles
+.blogpost {
+    h3,
+    h5 {
+        color: $dark-color !important;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-bottom: 2px solid $primary-color;
+        padding-bottom: 5px;
+        transition: color 0.3s, transform 0.3s;
+
+        &:hover {
+            color: #987805 !important;
+            transform: translateY(-2px);
+        }
+    }
+}
+
+// Navbar styles
+.navbar {
+    background: linear-gradient(to right, #358238, #054f09) !important;
+
+    .nav-link {
+        color: #faf8f3 !important;
+
+        &:hover {
+            color: $hover-color !important;
+        }
+    }
+}
+
+// Footer Navbar styles
+.footer-navbar {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+
+    .nav-item {
+        margin: 0 10px;
+
+        .nav-link {
+            color: $dark-color !important;
+            transition: color 0.3s;
+
+            &:hover {
+                color: $hover-color !important;
+            }
+        }
+    }
+}
+
+// Footer Icons styles
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+
+    .fab {
+        color: $dark-color !important;
+        margin: 0 10px;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $hover-color !important;
+        }
+    }
+}
+
+// Home Page - Hero Section
+.masthead {
+    background-image: url('../img/hero33.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(250, 251, 250);
+
+    h1,
+    h4 {
+        text-shadow: 1px 1px black;
+    }
+}
+
+// Home Page - Newsletter Section
+.news-input {
+    width: 100%;
+
+    @media (min-width: 768px) {
+        width: 50%;
+    }
+}
+
+// Event page
+.carousel-item {
+    position: relative;
+
+    .carousel-caption {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        color: white;
+        text-align: left;
+
+        h5 {
+            font-size: 2rem;
+            font-weight: $font-weight-bold;
+        }
+
+        p {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+// Blog page
+.blog-header {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+.blog-post {
+    margin-bottom: 20px;
+
+    img {
+        max-height: 200px;
+        object-fit: cover;
+    }
+}
+
+// Articles pages
+.article-header {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    margin-bottom: 30px;
+}
+
+.article-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: $border-radius;
+}
+
+.article-author {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.article-body {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.article-footer {
+    margin-top: 40px;
+    border-top: 1px solid #dee2e6;
+    padding-top: 20px;
+}
